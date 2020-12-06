@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html, body{
+    height: 100%;
+}
+
+.clear{
+    clear: both;
+}
+.center{
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/*Acima estão as classes de base*/
+
+header{
+    background-color: rgba(174, 215, 242, 0.6);
+    padding: 25px;
+}
+
+.logo{
+    width: 160px;
+    height: 60px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.left{
+    float: left;
+    background-image: url('../imagens/logo1.png');
+}
+
+.right{
+    float: right;
+    background-image: url('../imagens/logo2.png');
+}
+
+.section01{
+    width: 100%;
+}
+
+.img-fundo{
+    width: 100%;
+    height: 600px;/*não esqueça de definir largura e altura para usar o background-image*/
+    background-image: url('../imagens/bg-form.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.seta{
+    width:50px;
+    height: 50px;
+    background-image: url('../imagens/arrow.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.formulario{
+    max-width: 400px;
+    height: 620px;
+    background-color:rgba(181, 221, 247, 0.6);
+    position: absolute;
+    top: -10px;
+    right: 0;
+    box-shadow: 2px 2px 6px black;
+}
+
+.formulario h2{
+    font-weight: normal;
+    padding: 20px;
+    font-size: 17px;
+    background-color:rgba(41, 82, 109, 0.9);
+    color:  white;;
+}
+
+.formulario .campo-form{
+    margin: 10% auto;
+    padding-left: 3%;
+}
+
+.formulario input{
+    width: 95%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 8px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+.formulario input[type="button"]{
+    background-color:rgba(41, 82, 109, 0.9);
+    color: white;
+    cursor: pointer;
+}
+
+.bloco{
+    background-color: rgb(41, 82, 109);
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+.bloco h2{
+    font-weight: normal;
+}
+.bloco p{
+    margin-top: 15px;
+}
+
+
+/*aplicar o flexbox*/
+.parte{
+    width: 100%;
+    height: 320px;
+}
+
+.parte .texto{
+    width: 35%;
+    height: inherit;
+    text-align: justify;
+    background-color:rgba(41, 82, 109, 0.9);
+    float: left;
+    padding: 5%;
+    color: white;
+}
+
+.parte img {
+    width: 65%;
+    float: right;
+    height: inherit;
+}
+.reverse img{
+    float: left;
+}
+.reverse .texto{
+    float: right;
+}
+
+
+footer img{
+    display: block;
+    margin: 0 auto;
+}
+
+footer{
+    height: auto;
+    background-color: rgb(41, 82, 109);
+    padding: 30px;
+}
+
+@media (max-width: 751px){
+    .parte{
+        height: 500px;
+    }
+    .parte .texto{
+        display: block;
+        width: 100%;
+        height: 30%;
+        float: none;
+    }
+    .parte img {
+        width: 100%;
+        height: 70%;
+        float: none;
+        display: block;
+    }
+    .reverse img{
+        height: 70%;
+        float: none;
+        display: block;
+    }
+    .reverse .texto{
+        height: 30%;
+        display: block;
+        float: none;
+    }
+
+    .img-fundo{
+        height: auto;/*não esqueça de definir largura e altura para usar o background-image*/
+        position: relative;
+        padding: 20px;
+    }
+    
+    .formulario{
+        height: 590px;
+        position: static;
+        margin: 0 auto;
+    }
+    .formulario .campo-form{
+        margin: 8% auto;
+    }
+}
